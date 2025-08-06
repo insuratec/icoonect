@@ -1,12 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>InsuraTec Connect - Feed</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,26 +17,6 @@
             line-height: 1.47;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            /* Mobile app optimizations */
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            /* Prevent pull-to-refresh on mobile */
-            overscroll-behavior: none;
-            /* Optimize for mobile performance */
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-        }
-        
-        /* Allow text selection for content areas */
-        .content, .comment-content, textarea, input {
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
         }
         
         /* Modern Icon System */
@@ -368,146 +344,7 @@
             overflow-y: auto;
         }
         
-        /* Enhanced Mobile Responsive Design for App Embedding */
-        
-        /* Small Mobile Devices (320px - 480px) */
-        @media (max-width: 480px) {
-            .header {
-                height: 60px;
-                padding: 8px 16px;
-            }
-            
-            .logo {
-                height: 40px;
-            }
-            
-            .search-container {
-                max-width: 200px;
-            }
-            
-            .search-input {
-                padding: 8px 12px 8px 36px;
-                font-size: 13px;
-            }
-            
-            .search-icon {
-                left: 12px;
-                font-size: 14px;
-            }
-            
-            .notification-bell {
-                width: 32px;
-                height: 32px;
-            }
-            
-            .container {
-                height: calc(100vh - 60px);
-            }
-            
-            .sidebar {
-                top: 60px;
-                width: 100%;
-                height: calc(100vh - 60px);
-            }
-            
-            .post {
-                margin: 8px;
-                padding: 12px;
-                border-radius: 12px;
-            }
-            
-            .post-input {
-                margin: 8px;
-                padding: 12px;
-            }
-            
-            .post-input button {
-                padding: 10px 16px;
-                font-size: 13px;
-            }
-            
-            .user-info img {
-                width: 32px;
-                height: 32px;
-            }
-            
-            .name {
-                font-size: 14px;
-            }
-            
-            .time {
-                font-size: 11px;
-            }
-            
-            .audience-badge, .post-type-badge {
-                padding: 2px 4px;
-                font-size: 10px;
-            }
-            
-            .content {
-                font-size: 14px;
-                line-height: 1.4;
-            }
-            
-            .post-actions {
-                padding: 8px 0;
-            }
-            
-            .action-btn {
-                padding: 6px 8px;
-                font-size: 12px;
-            }
-            
-            .comment-avatar {
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 2px solid #fff;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            }
-            
-            .comment-content {
-                font-size: 13px;
-            }
-            
-            .comment-meta {
-                font-size: 11px;
-            }
-            
-            /* Modal adjustments for small screens */
-            .modal-content {
-                width: calc(100% - 32px);
-                margin: 4% auto;
-                max-height: 90vh;
-            }
-            
-            .modal-body {
-                padding: 16px;
-            }
-            
-            /* Photo upload modal adjustments */
-            #photoUploadModal .modal-content {
-                width: calc(100% - 32px);
-                margin: 4% auto;
-            }
-            
-            .upload-area {
-                min-height: 120px;
-            }
-            
-            .uploaded-photo-item {
-                width: 80px;
-                height: 80px;
-            }
-            
-            .uploaded-photo-item img {
-                height: 60px;
-                max-height: 120px;
-            }
-        }
-        
-        /* Medium Mobile Devices (481px - 768px) */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .sidebar {
                 position: fixed;
@@ -545,171 +382,6 @@
             .mobile-overlay.active {
                 opacity: 1;
                 visibility: visible;
-            }
-            
-            .post {
-                margin: 12px;
-                padding: 16px;
-            }
-            
-            .post-input {
-                margin: 12px;
-                padding: 16px;
-            }
-            
-            /* Modal adjustments */
-            .modal-content {
-                width: calc(100% - 48px);
-                margin: 2% auto;
-            }
-            
-            #photoUploadModal .modal-content {
-                width: calc(100% - 48px);
-                margin: 2% auto;
-            }
-        }
-        
-        /* Large Mobile Devices (769px - 1024px) */
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .container {
-                max-width: 100%;
-            }
-            
-            .main {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-            
-            .sidebar {
-                width: 280px;
-            }
-            
-            .post {
-                margin: 16px;
-                padding: 20px;
-            }
-        }
-        
-        /* App-specific optimizations */
-        @media (max-width: 1024px) {
-            /* Prevent horizontal scrolling */
-            body {
-                overflow-x: hidden;
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            /* Optimize touch targets */
-            .action-btn, .comment-action, .notification-bell {
-                min-height: 44px;
-                min-width: 44px;
-            }
-            
-            /* Improve text readability */
-            .content, .comment-content {
-                font-size: 16px;
-                line-height: 1.5;
-                -webkit-font-smoothing: antialiased;
-            }
-            
-            /* Optimize images for mobile */
-            .post-images img, .comment-content img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
-            }
-            
-            /* Better modal handling for mobile */
-            .modal {
-                display: none;
-                position: fixed;
-                z-index: 1000;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.5);
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            .modal-content {
-                background-color: #fefefe;
-                margin: 5% auto;
-                padding: 0;
-                border-radius: 10px;
-                width: 90%;
-                max-width: 600px;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-                max-height: 90vh;
-                overflow-y: auto;
-            }
-            
-            /* Improve reaction picker for mobile */
-            .reaction-picker {
-                position: fixed;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: white;
-                border-radius: 12px;
-                padding: 12px;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-                z-index: 1001;
-            }
-            
-            /* Optimize comment input for mobile */
-            .comment-compose {
-                padding: 12px;
-            }
-            
-            .comment-compose textarea {
-                min-height: 44px;
-                font-size: 16px;
-                padding: 12px;
-            }
-            
-            /* Better spacing for mobile */
-            .comment {
-                margin-bottom: 12px;
-                padding: 8px 0;
-            }
-            
-            .comment-bubble {
-                padding: 8px 12px;
-                border-radius: 18px;
-            }
-        }
-        
-        /* iOS Safari specific optimizations */
-        @supports (-webkit-touch-callout: none) {
-            .container {
-                height: calc(100vh - 80px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-            }
-            
-            .header {
-                padding-top: calc(12px + env(safe-area-inset-top));
-                padding-bottom: 12px;
-            }
-            
-            .sidebar {
-                padding-top: env(safe-area-inset-top);
-                padding-bottom: env(safe-area-inset-bottom);
-            }
-            
-            .modal-content {
-                margin-top: calc(5% + env(safe-area-inset-top));
-                margin-bottom: calc(5% + env(safe-area-inset-bottom));
-            }
-        }
-        
-        /* Android Chrome specific optimizations */
-        @media screen and (-webkit-min-device-pixel-ratio: 0) {
-            .container {
-                height: calc(100vh - 80px);
-            }
-            
-            /* Prevent zoom on input focus */
-            input, textarea, select {
-                font-size: 16px;
             }
         }
         .post-input { margin-bottom: 20px; display: flex; gap: 10px; align-items: flex-start; }
@@ -802,14 +474,7 @@
             border: 0.5px solid rgba(0, 0, 0, 0.05);
         }
         .post .user-info { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .post .user-info img { 
-            width: 40px; 
-            height: 40px; 
-            border-radius: 50%; 
-            object-fit: cover;
-            border: 2px solid #fff;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
+        .post .user-info img { width: 40px; height: 40px; border-radius: 50%; }
         .post .user-info .name { font-weight: 600; color: #1d1d1f; letter-spacing: -0.01em; }
         .post .user-info .time { color: #8e8e93; font-size: 13px; }
         .post .content { margin-bottom: 16px; line-height: 1.47; color: #1d1d1f; }
@@ -2785,87 +2450,6 @@
         .comment-action:hover { text-decoration: underline; }
         .reaction-avatars .avatar-wrapper img { width:100%; height:100%; border-radius:50%; object-fit:cover; }
         .reaction-avatars .overlay-emoji { position:absolute; bottom:-3px; right:-3px; font-size:12px; }
-        
-        /* Post Participants Styles */
-        .post-participants {
-            margin-top: 10px;
-            padding: 12px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
-        }
-        
-        .participants-header {
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 8px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-        
-        .participants-header i {
-            margin-right: 5px;
-            color: #007AFF;
-        }
-        
-        .participants-avatars {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        
-        .participant-avatar {
-            position: relative;
-            transition: transform 0.2s ease;
-        }
-        
-        .participant-avatar:hover {
-            transform: scale(1.1);
-        }
-        
-        .participant-avatar img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1px solid #ddd;
-        }
-        
-        .participant-avatar.author img {
-            border: 2px solid #007AFF;
-        }
-        
-        .author-badge {
-            position: absolute;
-            top: -2px;
-            right: -2px;
-            width: 12px;
-            height: 12px;
-            background: #007AFF;
-            border-radius: 50%;
-            border: 2px solid white;
-            font-size: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-        
-        .more-participants {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background: #e9ecef;
-            border-radius: 50%;
-            font-size: 12px;
-            color: #666;
-            font-weight: 500;
-            border: 1px solid #ddd;
-        }
     </style>
     <!-- Parse SDK -->
     <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
@@ -2903,7 +2487,7 @@
                             <span class="username" id="user-name">Tiberio Maia</span>
                             <span class="user-role">admin</span>
                         </div>
-                        <div class="user-avatar" id="user-avatar">
+                        <div class="user-avatar" id="user-avatar" onclick="openProfilePictureUpload()" title="Click to update profile picture">
                             <img id="user-avatar-img" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; display: none;" />
                             <span class="avatar-letter" id="user-avatar-letter">T</span>
                         </div>
@@ -3549,21 +3133,30 @@ OU
             const userAvatarLetter = document.getElementById('user-avatar-letter');
             const userName = document.getElementById('user-name');
             
-            const name = currentUser.get('name') || currentUser.get('username') || 'Usuário';
+            // Get user name
+            const name = currentUser.get('name') || 
+                        currentUser.get('given_name') + ' ' + currentUser.get('family_name') || 
+                        currentUser.get('username') || 
+                        'Usuário';
+            
             userName.textContent = name;
             
+            // Get user avatar - prioritize uploaded profilePicture over Google picture
             let avatarUrl = null;
-            const profilePictureFile = currentUser.get('profilePicture'); // Foto de upload (Parse File)
-            const ssoPicture = currentUser.get('picture'); // Foto do login (URL)
             
-            // **ALTERAÇÃO PRINCIPAL AQUI: Lógica de Prioridade**
-            // 1. Prioridade: picture (campo principal do usuário)
-            if (ssoPicture) {
-                avatarUrl = ssoPicture;
-            } 
-            // 2. Segunda opção: Foto enviada pelo upload (`profilePicture`)
-            else if (profilePictureFile && profilePictureFile.url) {
-                avatarUrl = profilePictureFile.url();
+            // First check for uploaded profile picture (highest priority)
+            if (currentUser.get('profilePicture')) {
+                const profilePictureFile = currentUser.get('profilePicture');
+                if (profilePictureFile && profilePictureFile.url) {
+                    avatarUrl = profilePictureFile.url();
+                }
+            }
+            
+            // Fall back to Google/other pictures if no uploaded picture
+            if (!avatarUrl) {
+                avatarUrl = currentUser.get('picture') || 
+                           currentUser.get('googlePicture') || 
+                           currentUser.get('avatar');
             }
             
             if (avatarUrl) {
@@ -3571,12 +3164,14 @@ OU
                 userAvatarImg.style.display = 'block';
                 userAvatarLetter.style.display = 'none';
             } else {
-                // Fallback: se não houver foto, mostra a inicial do nome
+                // Show letter avatar
                 const initial = name.charAt(0).toUpperCase();
                 userAvatarLetter.textContent = initial;
                 userAvatarImg.style.display = 'none';
                 userAvatarLetter.style.display = 'block';
             }
+            
+            console.log("Header updated with user:", name, "avatar:", avatarUrl);
         }
 
         // Check login status and fetch user details
@@ -3585,20 +3180,12 @@ OU
             if (currentUser) {
                 document.getElementById('post-content').disabled = false;
                 document.getElementById('post-btn').disabled = false;
-                // Fetch user details including picture fields
+                // Fetch user details including Google picture
                 try {
                     const user = await Parse.User.current().fetch();
                     console.log("User fetched:", user);
-                    
-                    // Check for picture fields in order of priority
-                    if (user.get('picture')) {
-                        console.log("Picture field found:", user.get('picture'));
-                    } else if (user.get('profilePicture')) {
+                    if (user.get('profilePicture')) {
                         console.log("Profile picture URL:", user.get('profilePicture').url);
-                    } else if (user.get('googlePicture')) {
-                        console.log("Google picture found:", user.get('googlePicture'));
-                    } else if (user.get('avatar')) {
-                        console.log("Avatar field found:", user.get('avatar'));
                     } else {
                         console.log("No profile picture found.");
                     }
@@ -4449,21 +4036,9 @@ OU
                                 'User';
                 post.set('userName', userName);
                 
-                // Get user picture - prioritize picture field
-                let userPicture = null;
-                if (currentUser.get('picture')) {
-                    userPicture = currentUser.get('picture');
-                } else if (currentUser.get('profilePicture')) {
-                    const profilePictureFile = currentUser.get('profilePicture');
-                    if (profilePictureFile && profilePictureFile.url) {
-                        userPicture = profilePictureFile.url();
-                    }
-                } else {
-                    userPicture = currentUser.get('googlePicture') || 
-                                 currentUser.get('avatar') || 
-                                 null;
-                }
-                
+                const userPicture = currentUser.get('picture') || 
+                                   currentUser.get('avatar') || 
+                                   null;
                 if (userPicture) {
                     post.set('userPicture', userPicture);
                 }
@@ -4652,14 +4227,18 @@ OU
             }
         };
 
+        // Load posts with user details and Google picture
         async function loadPosts() {
             const Post = Parse.Object.extend('Post');
             const query = new Parse.Query(Post);
-            query.include('user');
+            query.include('user'); // Include user data to show names and pictures
             query.descending('createdAt');
             query.limit(20);
             try {
                 const results = await query.find();
+                console.log("Posts loaded:", results.length);
+                console.log("Posts data:", results);
+                
                 const postsDiv = document.getElementById('posts');
                 postsDiv.innerHTML = '';
                 
@@ -4671,120 +4250,72 @@ OU
                 const fragment = document.createDocumentFragment();
                 for (const post of results) {
                     const userPointer = post.get('user');
+                    console.log("Post user pointer:", userPointer);
+                    
                     let username = 'Unknown User';
-                    let profilePicture = '';
+                    let profilePicture = 'https://via.placeholder.com/40';
                     
-                    // **SISTEMA COMPLETO DE AVATARES - REFATORAÇÃO MAJOR v2.0**
-                    // 
-                    // ✅ MELHORIAS IMPLEMENTADAS:
-                    // 1. Sistema robusto com 9+ fontes de imagem por prioridade
-                    // 2. Cache de avatares para melhor performance
-                    // 3. Fallback garantido com ui-avatars.com personalizados
-                    // 4. Logs detalhados para debug
-                    // 5. Tratamento de erros individual por fonte
-                    // 6. Consistência entre posts e comentários
-                    // 7. Suporte a múltiplos formatos de nome de usuário
-                    // 8. Avatares visuais aprimorados com bordas e sombras
-                    //
-                    // 🎯 RESULTADO: 100% DOS POSTS AGORA TÊM FOTOS EXIBIDAS!
-                    
-                    // **CACHE DE AVATARES PARA MELHOR PERFORMANCE**
-                    const avatarCache = new Map();
-                    
-                    // **SISTEMA ROBUSTO DE FOTOS DE PERFIL - GARANTIA DE 100% DOS POSTS COM FOTO**
-                    const getUserProfilePicture = (user, fallbackName) => {
-                        // Verificar cache primeiro para melhor performance
-                        const userId = user.id || user.objectId;
-                        if (userId && avatarCache.has(userId)) {
-                            console.log(`🚀 Avatar do cache para ${fallbackName}:`, avatarCache.get(userId));
-                            return avatarCache.get(userId);
+                    // Get user details - first try direct post fields (workaround for Parse permissions)
+                    if (post.get('userName')) {
+                        username = post.get('userName');
+                        if (post.get('userPicture')) {
+                            profilePicture = post.get('userPicture');
+                        }
+                    }
+                    // Then try the included user data
+                    else if (userPointer) {
+                        // If user data is included, get the name and picture
+                        if (userPointer.get) {
+                            // User data is fully loaded
+                            username = userPointer.get('name') || 
+                                      userPointer.get('username') || 
+                                      userPointer.get('email') || 
+                                      `User ${userPointer.id.substring(0, 8)}`;
+                            
+                            // Get user's profile picture
+                            if (userPointer.get('picture')) {
+                                profilePicture = userPointer.get('picture');
+                            } else if (userPointer.get('profilePicture')) {
+                                const profilePictureFile = userPointer.get('profilePicture');
+                                if (profilePictureFile && profilePictureFile.url) {
+                                    profilePicture = profilePictureFile.url();
+                                }
+                            } else if (userPointer.get('googlePicture')) {
+                                profilePicture = userPointer.get('googlePicture');
+                            } else if (userPointer.get('avatar')) {
+                                profilePicture = userPointer.get('avatar');
+                            } else if (userPointer.get('profileImage')) {
+                                profilePicture = userPointer.get('profileImage');
+                            }
+                            
+                            // If no profile picture found, use generated avatar
+                            if (!profilePicture || profilePicture === 'https://via.placeholder.com/40') {
+                                profilePicture = `https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&size=40&background=random&color=fff&format=png&rounded=true`;
+                            }
+                        } else if (userPointer.id) {
+                            // Only have user ID, no full data
+                            username = `User ${userPointer.id.substring(0, 8)}`;
+                            profilePicture = `https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&size=40&background=cccccc&color=fff&format=png&rounded=true`;
                         }
                         
-                        const sources = [
-                            // Prioridade 1: Campo 'picture' (mais comum)
-                            () => user.get('picture'),
-                            // Prioridade 2: ProfilePicture como arquivo Parse
-                            () => {
-                                const profilePictureFile = user.get('profilePicture');
-                                return (profilePictureFile && profilePictureFile.url) ? profilePictureFile.url() : null;
-                            },
-                            // Prioridade 3: Google Picture
-                            () => user.get('googlePicture'),
-                            // Prioridade 4: Avatar genérico
-                            () => user.get('avatar'),
-                            // Prioridade 5: ProfileImage
-                            () => user.get('profileImage'),
-                            // Prioridade 6: Photo field
-                            () => user.get('photo'),
-                            // Prioridade 7: Image field
-                            () => user.get('image'),
-                            // Prioridade 8: Facebook picture
-                            () => user.get('facebookPicture'),
-                            // Prioridade 9: LinkedIn picture
-                            () => user.get('linkedinPicture')
-                        ];
-                        
-                        let finalAvatar = null;
-                        
-                        // Tenta cada fonte de imagem em ordem de prioridade
-                        for (let i = 0; i < sources.length; i++) {
-                            try {
-                                const imageUrl = sources[i]();
-                                if (imageUrl && imageUrl.trim() !== '' && imageUrl !== 'null' && imageUrl !== 'undefined') {
-                                    finalAvatar = imageUrl;
-                                    console.log(`✅ Foto encontrada para ${fallbackName} (fonte ${i + 1}):`, imageUrl);
-                                    break;
+                        // Special handling for current user
+                        if (currentUser && userPointer.id === currentUser.id) {
+                            username = currentUser.get('name') || currentUser.get('username') || currentUser.get('email') || 'You';
+                            
+                            // Use current user's picture if available
+                            if (currentUser.get('picture')) {
+                                profilePicture = currentUser.get('picture');
+                            } else if (currentUser.get('profilePicture')) {
+                                const profilePictureFile = currentUser.get('profilePicture');
+                                if (profilePictureFile && profilePictureFile.url) {
+                                    profilePicture = profilePictureFile.url();
                                 }
-                            } catch (error) {
-                                console.warn(`⚠️ Erro ao acessar fonte ${i + 1} para ${fallbackName}:`, error);
                             }
                         }
-                        
-                        // FALLBACK GARANTIDO: Avatar gerado automaticamente
-                        if (!finalAvatar) {
-                            finalAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(fallbackName)}&size=80&background=random&color=fff&format=png&rounded=true&bold=true`;
-                            console.log(`🎭 Avatar fallback gerado para ${fallbackName}:`, finalAvatar);
-                        }
-                        
-                        // Salvar no cache para futuros usos
-                        if (userId) {
-                            avatarCache.set(userId, finalAvatar);
-                            console.log(`💾 Avatar salvo no cache para ${fallbackName}`);
-                        }
-                        
-                        return finalAvatar;
-                    };
-                    
-                    if (userPointer && userPointer.get) {
-                        // Obter nome do usuário com múltiplas fontes
-                        username = userPointer.get('name') || 
-                                  userPointer.get('username') || 
-                                  userPointer.get('displayName') ||
-                                  (userPointer.get('firstName') ? userPointer.get('firstName') + ' ' + (userPointer.get('lastName') || '') : null) ||
-                                  (userPointer.get('email') ? userPointer.get('email').split('@')[0] : null) || 
-                                  'User';
-                        
-                        // Garantir que o username seja válido
-                        username = username.trim() || 'User';
-                        
-                        // Buscar foto de perfil com sistema robusto
-                        profilePicture = getUserProfilePicture(userPointer, username);
-                        
                     } else {
-                        // Fallback TOTAL se o userPointer falhar
-                        username = post.get('userName') || 
-                                  post.get('authorName') || 
-                                  'Unknown User';
-                        
-                        // Tentar buscar foto do post diretamente
-                        profilePicture = post.get('userPicture') || 
-                                        post.get('authorPicture') ||
-                                        `https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&size=80&background=random&color=fff&format=png&rounded=true&bold=true`;
-                        
-                        console.log(`🔄 Fallback total ativado para post ${post.id}, usuário: ${username}`);
+                        // No user data at all
+                        profilePicture = `https://ui-avatars.com/api/?name=Unknown&size=40&background=dddddd&color=fff&format=png&rounded=true`;
                     }
-                    
-                    const finalAvatarUrl = profilePicture;
                     
                     const date = new Date(post.createdAt).toLocaleString('en-US', { 
                         month: 'short', 
@@ -4808,7 +4339,7 @@ OU
                     postDiv.innerHTML = `
                         ${menuButton}
                         <div class="user-info">
-                            <img src="${finalAvatarUrl}" alt="User Avatar" />
+                            <img src="${profilePicture}" alt="User Avatar" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&size=40&background=random&color=fff&format=png&rounded=true'" />
                             <div>
                                 <div class="name">${username}</div>
                                 <div style="display: flex; align-items: center; gap: 8px;">
@@ -4825,17 +4356,6 @@ OU
                         </div>
                         <div class="content">${content}</div>
                         
-                        <!-- Post Participants -->
-                        <div class="post-participants" id="post-participants-${postId}" style="display: none;">
-                            <div class="participants-header">
-                                <i class="fas fa-users"></i>
-                                <span id="participants-count-${postId}">0</span> participants
-                            </div>
-                            <div class="participants-avatars" id="participants-avatars-${postId}">
-                                <!-- Participant avatars will be loaded here -->
-                            </div>
-                        </div>
-                        
                                <!-- Post Images -->
        ${post.get('images') ? `
        <div class="post-images" style="margin-top: 10px;">
@@ -4844,7 +4364,7 @@ OU
            `).join('')}
        </div>
        ` : ''}
-
+                        
                         <div class="metrics" style="display:none;">
                             <div class="metric">
                                 <span class="icon">👁️</span>
@@ -4877,7 +4397,7 @@ OU
                         <div class="comments-section" id="comments-section-${postId}" style="display: block;">
                             <div id="comments-list-${postId}"></div>
                             <div class="comment-compose">
-                                <img src="${profilePicture}" alt="User Avatar" class="comment-avatar" onError="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&size=32&background=random&color=fff&format=png&rounded=true'"/>
+                                <div class="comment-avatar">${username.charAt(0)}</div>
                                 <div class="comment-box">
                                     <textarea id="comment-input-${postId}" rows="1" placeholder="Add a comment." oninput="handleCommentInput('${postId}')"></textarea>
                                     <div class="comment-tools">
@@ -4903,7 +4423,6 @@ OU
                     await loadPostComments(post.id);
                     await loadPostViews(post.id);
                     await loadPostReactions(post.id);
-                    await loadPostParticipants(post.id);
                 }
             } catch (error) {
                 console.error("Error loading posts:", error);
@@ -4911,63 +4430,10 @@ OU
             }
         }
 
-        // **FUNÇÃO DE DEBUG PARA AVATARES**
-        function testAvatarSystem() {
-            console.log('🧪 Testando sistema de avatares...');
-            
-            // Simular diferentes cenários de usuários
-            const testUsers = [
-                { name: 'Peter Beckman', picture: 'https://example.com/peter.jpg' },
-                { name: 'Maria Silva', googlePicture: 'https://lh3.googleusercontent.com/test' },
-                { name: 'João Santos', avatar: null },
-                { name: '', email: 'usuario@exemplo.com' },
-                { name: null, username: 'user123' }
-            ];
-            
-            testUsers.forEach((user, index) => {
-                const mockUser = {
-                    get: (field) => user[field] || null
-                };
-                
-                const fallbackName = user.name || user.username || user.email?.split('@')[0] || 'User';
-                console.log(`👤 Teste ${index + 1} - ${fallbackName}:`);
-                
-                // Simular a função getUserProfilePicture
-                const sources = [
-                    () => mockUser.get('picture'),
-                    () => mockUser.get('googlePicture'),
-                    () => mockUser.get('avatar'),
-                    () => mockUser.get('profileImage')
-                ];
-                
-                let foundImage = false;
-                for (let i = 0; i < sources.length; i++) {
-                    const imageUrl = sources[i]();
-                    if (imageUrl && imageUrl.trim() !== '' && imageUrl !== 'null') {
-                        console.log(`  ✅ Fonte ${i + 1}: ${imageUrl}`);
-                        foundImage = true;
-                        break;
-                    }
-                }
-                
-                if (!foundImage) {
-                    const fallbackAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(fallbackName)}&size=80&background=random&color=fff&format=png&rounded=true&bold=true`;
-                    console.log(`  🎭 Fallback: ${fallbackAvatar}`);
-                }
-            });
-            
-            console.log('✅ Teste do sistema de avatares concluído!');
-        }
-        
         // Load initial data
         loadPosts();
         loadFiles();
         loadPhotos();
-        
-        // Executar teste de avatares em desenvolvimento
-        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-            setTimeout(testAvatarSystem, 2000);
-        }
 
         // Like and Comment Functions
         async function toggleLike(postId) {
@@ -5111,9 +4577,6 @@ OU
                 // Reload comments for this post
                 await loadPostComments(postId);
                 
-                // Update participants list
-                await loadPostParticipants(postId);
-                
             } catch (error) {
                 console.error('Error adding comment:', error);
                 console.error('Error details:', {
@@ -5167,69 +4630,59 @@ OU
                         let username = 'Unknown User';
                         let userAvatar = 'https://via.placeholder.com/32x32';
                         
-                        // **SISTEMA ROBUSTO DE AVATARES PARA COMENTÁRIOS**
-                        const getCommentUserAvatar = (user, fallbackName) => {
-                            if (!user) return `https://ui-avatars.com/api/?name=Unknown&size=32&background=random&color=fff&format=png&rounded=true&bold=true`;
-                            
-                            const sources = [
-                                () => user.get('picture'),
-                                () => {
-                                    const profilePictureFile = user.get('profilePicture');
-                                    return (profilePictureFile && profilePictureFile.url) ? profilePictureFile.url() : null;
-                                },
-                                () => user.get('googlePicture'),
-                                () => user.get('avatar'),
-                                () => user.get('profileImage'),
-                                () => user.get('photo'),
-                                () => user.get('image'),
-                                () => user.get('facebookPicture'),
-                                () => user.get('linkedinPicture')
-                            ];
-                            
-                            for (let i = 0; i < sources.length; i++) {
-                                try {
-                                    const imageUrl = sources[i]();
-                                    if (imageUrl && imageUrl.trim() !== '' && imageUrl !== 'null' && imageUrl !== 'undefined') {
-                                        return imageUrl;
-                                    }
-                                } catch (error) {
-                                    // Silently continue to next source
-                                }
-                            }
-                            
-                            return `https://ui-avatars.com/api/?name=${encodeURIComponent(fallbackName)}&size=32&background=random&color=fff&format=png&rounded=true&bold=true`;
-                        };
-                        
                         // Get user details from the included user data
                         if (userPointer) {
+                            // If user data is included, get the name and picture
                             if (userPointer.get) {
                                 // User data is fully loaded
                                 username = userPointer.get('name') || 
                                           userPointer.get('username') || 
-                                          userPointer.get('displayName') ||
-                                          (userPointer.get('firstName') ? userPointer.get('firstName') + ' ' + (userPointer.get('lastName') || '') : null) ||
-                                          (userPointer.get('email') ? userPointer.get('email').split('@')[0] : null) ||
+                                          userPointer.get('email') || 
                                           `User ${userPointer.id.substring(0, 8)}`;
                                 
-                                username = username.trim() || `User ${userPointer.id.substring(0, 8)}`;
-                                
-                                // Special handling for current user
-                                if (currentUser && userPointer.id === currentUser.id) {
-                                    username = currentUser.get('name') || currentUser.get('username') || currentUser.get('email') || 'You';
-                                    userAvatar = getCommentUserAvatar(currentUser, username);
-                                } else {
-                                    userAvatar = getCommentUserAvatar(userPointer, username);
+                                // Get user's profile picture
+                                if (userPointer.get('picture')) {
+                                    userAvatar = userPointer.get('picture');
+                                } else if (userPointer.get('profilePicture')) {
+                                    const profilePictureFile = userPointer.get('profilePicture');
+                                    if (profilePictureFile && profilePictureFile.url) {
+                                        userAvatar = profilePictureFile.url();
+                                    }
+                                } else if (userPointer.get('googlePicture')) {
+                                    userAvatar = userPointer.get('googlePicture');
+                                } else if (userPointer.get('avatar')) {
+                                    userAvatar = userPointer.get('avatar');
+                                } else if (userPointer.get('profileImage')) {
+                                    userAvatar = userPointer.get('profileImage');
                                 }
                                 
+                                // If no profile picture found, use generated avatar
+                                if (!userAvatar || userAvatar === 'https://via.placeholder.com/32x32') {
+                                    userAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&size=32&background=random&color=fff&format=png&rounded=true`;
+                                }
                             } else if (userPointer.id) {
                                 // Only have user ID, no full data
                                 username = `User ${userPointer.id.substring(0, 8)}`;
-                                userAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&size=32&background=random&color=fff&format=png&rounded=true&bold=true`;
+                                userAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(username)}&size=32&background=cccccc&color=fff&format=png&rounded=true`;
+                            }
+                            
+                            // Special handling for current user
+                            if (currentUser && userPointer.id === currentUser.id) {
+                                username = currentUser.get('name') || currentUser.get('username') || currentUser.get('email') || 'You';
+                                
+                                // Use current user's picture if available
+                                if (currentUser.get('picture')) {
+                                    userAvatar = currentUser.get('picture');
+                                } else if (currentUser.get('profilePicture')) {
+                                    const profilePictureFile = currentUser.get('profilePicture');
+                                    if (profilePictureFile && profilePictureFile.url) {
+                                        userAvatar = profilePictureFile.url();
+                                    }
+                                }
                             }
                         } else {
                             // No user data at all
-                            username = 'Unknown User';
-                            userAvatar = `https://ui-avatars.com/api/?name=Unknown&size=32&background=random&color=fff&format=png&rounded=true&bold=true`;
+                            userAvatar = `https://ui-avatars.com/api/?name=Unknown&size=32&background=dddddd&color=fff&format=png&rounded=true`;
                         }
                         
                         const rawCommentContent = comment.get('content');
@@ -5438,20 +4891,9 @@ OU
                                 currentUser.get('email') || 
                                 'User';
                                 
-                // Get user picture - prioritize picture field
-                let userPicture = null;
-                if (currentUser.get('picture')) {
-                    userPicture = currentUser.get('picture');
-                } else if (currentUser.get('profilePicture')) {
-                    const profilePictureFile = currentUser.get('profilePicture');
-                    if (profilePictureFile && profilePictureFile.url) {
-                        userPicture = profilePictureFile.url();
-                    }
-                } else {
-                    userPicture = currentUser.get('googlePicture') || 
-                                 currentUser.get('avatar') || 
-                                 null;
-                }
+                const userPicture = currentUser.get('picture') || 
+                                   currentUser.get('avatar') || 
+                                   null;
                 
                 // Find posts by current user that don't have display info
                 const Post = Parse.Object.extend('Post');
@@ -5750,11 +5192,11 @@ OU
                 console.log('Setting avatar URL in UI:', avatarUrl);
                 
                 if (userAvatarImg && userAvatarLetter) {
-                userAvatarImg.src = avatarUrl;
-                userAvatarImg.style.display = 'block';
-                userAvatarLetter.style.display = 'none';
+                    userAvatarImg.src = avatarUrl;
+                    userAvatarImg.style.display = 'block';
+                    userAvatarLetter.style.display = 'none';
                     console.log('✅ UI elements updated');
-            } else {
+                } else {
                     console.warn('⚠️ Some UI elements not found');
                 }
                 
@@ -7315,9 +6757,6 @@ These users will be set as ADMIN and STAFF.
 
                 // Reload reactions to update display
                 await loadPostReactions(postId);
-                
-                // Update participants list
-                await loadPostParticipants(postId);
             } catch (error) {
                 console.error('Error adding reaction:', error);
                 alert('Failed to add reaction. Please try again.');
@@ -7582,170 +7021,6 @@ These users will be set as ADMIN and STAFF.
                 }
                 // Trigger input event to enable send button
                 textarea.dispatchEvent(new Event('input', { bubbles: true }));
-            }
-        }
-
-        // Load post participants (author, commenters, reactors)
-        async function loadPostParticipants(postId) {
-            try {
-                const participants = new Set(); // Use Set to avoid duplicates
-                const participantData = new Map(); // Store user data
-                
-                // 1. Get post author
-                const Post = Parse.Object.extend('Post');
-                const postQuery = new Parse.Query(Post);
-                postQuery.equalTo('objectId', postId);
-                postQuery.include('user');
-                const post = await postQuery.first();
-                
-                if (post && post.get('user')) {
-                    const author = post.get('user');
-                    const authorId = author.id;
-                    participants.add(authorId);
-                    
-                    // Get author's picture with priority
-                    let authorPicture = null;
-                    if (author.get('picture')) {
-                        authorPicture = author.get('picture');
-                    } else if (author.get('profilePicture')) {
-                        const profilePictureFile = author.get('profilePicture');
-                        if (profilePictureFile && profilePictureFile.url) {
-                            authorPicture = profilePictureFile.url();
-                        }
-                    } else if (author.get('googlePicture')) {
-                        authorPicture = author.get('googlePicture');
-                    } else if (author.get('avatar')) {
-                        authorPicture = author.get('avatar');
-                    }
-                    
-                    const authorName = author.get('name') || author.get('username') || author.get('email') || 'User';
-                    participantData.set(authorId, {
-                        name: authorName,
-                        picture: authorPicture || `https://ui-avatars.com/api/?name=${encodeURIComponent(authorName)}&size=32&background=random&color=fff&format=png&rounded=true`,
-                        type: 'author'
-                    });
-                }
-                
-                // 2. Get commenters
-                const Comment = Parse.Object.extend('Comment');
-                const commentQuery = new Parse.Query(Comment);
-                commentQuery.equalTo('post', { __type: 'Pointer', className: 'Post', objectId: postId });
-                commentQuery.include('user');
-                const comments = await commentQuery.find();
-                
-                for (const comment of comments) {
-                    const commenter = comment.get('user');
-                    if (commenter) {
-                        const commenterId = commenter.id;
-                        participants.add(commenterId);
-                        
-                        if (!participantData.has(commenterId)) {
-                            // Get commenter's picture with priority
-                            let commenterPicture = null;
-                            if (commenter.get('picture')) {
-                                commenterPicture = commenter.get('picture');
-                            } else if (commenter.get('profilePicture')) {
-                                const profilePictureFile = commenter.get('profilePicture');
-                                if (profilePictureFile && profilePictureFile.url) {
-                                    commenterPicture = profilePictureFile.url();
-                                }
-                            } else if (commenter.get('googlePicture')) {
-                                commenterPicture = commenter.get('googlePicture');
-                            } else if (commenter.get('avatar')) {
-                                commenterPicture = commenter.get('avatar');
-                            }
-                            
-                            const commenterName = commenter.get('name') || commenter.get('username') || commenter.get('email') || 'User';
-                            participantData.set(commenterId, {
-                                name: commenterName,
-                                picture: commenterPicture || `https://ui-avatars.com/api/?name=${encodeURIComponent(commenterName)}&size=32&background=random&color=fff&format=png&rounded=true`,
-                                type: 'commenter'
-                            });
-                        }
-                    }
-                }
-                
-                // 3. Get reactors
-                const Reaction = Parse.Object.extend('Reaction');
-                const reactionQuery = new Parse.Query(Reaction);
-                reactionQuery.equalTo('post', { __type: 'Pointer', className: 'Post', objectId: postId });
-                reactionQuery.include('user');
-                const reactions = await reactionQuery.find();
-                
-                for (const reaction of reactions) {
-                    const reactor = reaction.get('user');
-                    if (reactor) {
-                        const reactorId = reactor.id;
-                        participants.add(reactorId);
-                        
-                        if (!participantData.has(reactorId)) {
-                            // Get reactor's picture with priority
-                            let reactorPicture = null;
-                            if (reactor.get('picture')) {
-                                reactorPicture = reactor.get('picture');
-                            } else if (reactor.get('profilePicture')) {
-                                const profilePictureFile = reactor.get('profilePicture');
-                                if (profilePictureFile && profilePictureFile.url) {
-                                    reactorPicture = profilePictureFile.url();
-                                }
-                            } else if (reactor.get('googlePicture')) {
-                                reactorPicture = reactor.get('googlePicture');
-                            } else if (reactor.get('avatar')) {
-                                reactorPicture = reactor.get('avatar');
-                            }
-                            
-                            const reactorName = reactor.get('name') || reactor.get('username') || reactor.get('email') || 'User';
-                            participantData.set(reactorId, {
-                                name: reactorName,
-                                picture: reactorPicture || `https://ui-avatars.com/api/?name=${encodeURIComponent(reactorName)}&size=32&background=random&color=fff&format=png&rounded=true`,
-                                type: 'reactor'
-                            });
-                        }
-                    }
-                }
-                
-                // Display participants
-                const participantsContainer = document.getElementById(`post-participants-${postId}`);
-                const participantsCount = document.getElementById(`participants-count-${postId}`);
-                const participantsAvatars = document.getElementById(`participants-avatars-${postId}`);
-                
-                if (participantsContainer && participantsCount && participantsAvatars) {
-                    const participantCount = participantData.size;
-                    
-                    if (participantCount > 0) {
-                        participantsCount.textContent = participantCount;
-                        
-                                                 // Create avatar elements (show up to 8 participants)
-                         const avatarElements = Array.from(participantData.values())
-                             .slice(0, 8)
-                             .map(participant => {
-                                 const isAuthor = participant.type === 'author';
-                                 const avatarClass = isAuthor ? 'participant-avatar author' : 'participant-avatar';
-                                 const title = isAuthor ? `${participant.name} (Author)` : participant.name;
-                                 
-                                 return `<div class="${avatarClass}" title="${title}">
-                                     <img src="${participant.picture}" alt="${participant.name}" 
-                                          onError="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(participant.name)}&size=32&background=cccccc&color=fff&format=png&rounded=true'"/>
-                                     ${isAuthor ? '<div class="author-badge">★</div>' : ''}
-                                 </div>`;
-                             })
-                             .join('');
-                        
-                        participantsAvatars.innerHTML = avatarElements;
-                        participantsContainer.style.display = 'block';
-                        
-                                                 // Show more indicator if there are more than 8 participants
-                         if (participantCount > 8) {
-                             participantsAvatars.innerHTML += `<div class="more-participants">+${participantCount - 8}</div>`;
-                         }
-                    } else {
-                        participantsContainer.style.display = 'none';
-                    }
-                }
-                
-                console.log(`📊 Loaded ${participantCount} participants for post ${postId}`);
-            } catch (error) {
-                console.error('Error loading post participants:', error);
             }
         }
 
@@ -8938,5 +8213,4 @@ These users will be set as ADMIN and STAFF.
     <!-- Hidden file input for profile picture upload -->
     <input type="file" id="profile-picture-input" accept="image/*" style="display: none;" />
 </body>
-</html> 
 </html> 
